@@ -2,7 +2,7 @@
 
 ## Install
 ```
-go get github.com/gogaruda/pkg@v1.0.0
+go get github.com/gogaruda/pkg
 ```
 
 ## Middleware
@@ -29,12 +29,4 @@ func main() {
 	r := gin.Default()
 	r.Use(middleware.CORSMiddleware(getAllowedOrigins()))
 }
-```
-
-## APPERROR
-
-## Database
-### 1. ACID(Atomicity, Consistency, Isolation, and Durability)
-```go
-
 ```
