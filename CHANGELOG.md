@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### [1.2.1] - (2025-06-25)
+### Perbaikan
+- Pindahkan kode dari ulid ke jwt dan sebaliknya
+
 ## [1.2.0] - (2025-06-24)
 ### Perbaikan
 - Pisahkan apperror dan valigo(validator) ke module terpisah
