@@ -1,6 +1,10 @@
 # CHANGELOG
 
-### [1.2.1] - (2025-06-25)
+## [1.2.2] - (2025-06-25)
+### Perbaikan
+- Pindahkan WithTX ke module terpisah
+
+## [1.2.1] - (2025-06-25)
 ### Perbaikan
 - Pindahkan kode dari ulid ke jwt dan sebaliknya
 
