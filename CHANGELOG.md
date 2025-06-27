@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [1.2.3] - (2025-06-27)
+### Perbaikan (response)
+- c.JSON ganti c.Abort untuk proccess yang harus berhenti seketika
+
 ## [1.2.2] - (2025-06-25)
 ### Perbaikan
 - Pindahkan WithTX ke module terpisah

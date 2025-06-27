@@ -34,7 +34,7 @@ func NoContent(c *gin.Context) {
 }
 
 func BadRequest(c *gin.Context, errors interface{}, message string) {
-	c.JSON(http.StatusBadRequest, APIResponse{
+	c.AbortWithStatusJSON(http.StatusBadRequest, APIResponse{
 		Code:    http.StatusBadRequest,
 		Status:  StatusError,
 		Message: message,
@@ -42,16 +42,8 @@ func BadRequest(c *gin.Context, errors interface{}, message string) {
 	})
 }
 
-func NotFound(c *gin.Context, message string) {
-	c.JSON(http.StatusNotFound, APIResponse{
-		Code:    http.StatusNotFound,
-		Status:  StatusError,
-		Message: message,
-	})
-}
-
 func Unauthorized(c *gin.Context, message string) {
-	c.JSON(http.StatusUnauthorized, APIResponse{
+	c.AbortWithStatusJSON(http.StatusUnauthorized, APIResponse{
 		Code:    http.StatusUnauthorized,
 		Status:  StatusError,
 		Message: message,
@@ -59,15 +51,23 @@ func Unauthorized(c *gin.Context, message string) {
 }
 
 func Forbidden(c *gin.Context, message string) {
-	c.JSON(http.StatusForbidden, APIResponse{
+	c.AbortWithStatusJSON(http.StatusForbidden, APIResponse{
 		Code:    http.StatusForbidden,
 		Status:  StatusError,
 		Message: message,
 	})
 }
 
+func NotFound(c *gin.Context, message string) {
+	c.AbortWithStatusJSON(http.StatusNotFound, APIResponse{
+		Code:    http.StatusNotFound,
+		Status:  StatusError,
+		Message: message,
+	})
+}
+
 func ServerError(c *gin.Context, message string) {
-	c.JSON(http.StatusInternalServerError, APIResponse{
+	c.AbortWithStatusJSON(http.StatusInternalServerError, APIResponse{
 		Code:    http.StatusInternalServerError,
 		Status:  StatusError,
 		Message: message,

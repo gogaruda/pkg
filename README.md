@@ -2,7 +2,7 @@
 
 ## Install
 ```
-go get github.com/gogaruda/pkg
+go get github.com/gogaruda/pkg@v1.2.3
 ```
 
 ## Middleware
